@@ -26,5 +26,5 @@ public enum ResponseCode {
     /**
      * 业务错误
      */
-    BIZ_ERROR;
+    BIZ_ERROR
 }

@@ -17,9 +17,9 @@ public class DataObjectHandler implements MetaObjectHandler {
 
     /**
      * 当没有值的时候再设置属性，如果有值则不设置。主要是方便单元测试
-     * @param fieldName
-     * @param fieldVal
-     * @param metaObject
+     * @param fieldName 字段的名称
+     * @param fieldVal 字段的值
+     * @param metaObject MetaObject 是 MyBatis-Plus 用来在自动填充回调中读写实体属性的反射工具，避免你自己写反射逻辑。
      */
     private void setFieldValByNameIfNull(String fieldName, Object fieldVal, MetaObject metaObject) {
         if (metaObject.getValue(fieldName) == null) {
