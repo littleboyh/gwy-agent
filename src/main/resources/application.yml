@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gwy-agent
+  datasource:
+    url: jdbc:mysql://localhost:3306/agent?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: hhq222wm115
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+langchain4j:
+  open-ai:
+    chat-model:
+      model-name: deepseek-chat
+      base-url: https://api.deepseek.com/v1
+      api-key: sk-07c57f8003ba405daf6e54aa737a20b9
+      log-requests: true
+      log-responses: true
+
+logging:
+  level:
+    root: info
+    dev.langchain4j: debug
